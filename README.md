@@ -12,6 +12,25 @@ Una landing page moderna y responsive desarrollada con HTML, CSS y JavaScript va
 - **Contadores Animados**: Estadísticas con animación de números
 - **Optimización SEO**: Estructura semántica y meta tags apropiados
 
+## 🌐 GitHub Pages
+
+Esta landing page está configurada para ser desplegada automáticamente en GitHub Pages.
+
+### URL de la página:
+**https://joelLavaisse.github.io/test-landing-1/**
+
+### Configuración automática:
+- ✅ Workflow de GitHub Actions configurado
+- ✅ Despliegue automático en cada push a `main`
+- ✅ Rama `gh-pages` para el contenido publicado
+
+### Para activar GitHub Pages manualmente:
+1. Ve a **Settings** en tu repositorio
+2. Navega a **Pages** en el menú lateral
+3. En **Source**, selecciona **Deploy from a branch**
+4. Selecciona la rama `gh-pages` y la carpeta `/ (root)`
+5. Haz clic en **Save**
+
 ## 📁 Estructura del Proyecto
 
 ```
@@ -21,6 +40,10 @@ test-landing-1/
 ├── script.js           # Funcionalidades JavaScript
 ├── .mocks/             # Carpeta con archivos de diseño
 │   └── 601098d3fe7e06017dce793b_shopify-hero.png
+├── .github/workflows/  # Configuración de GitHub Actions
+│   └── deploy.yml      # Workflow de despliegue
+├── .gitignore          # Archivos a ignorar
+├── CNAME               # Configuración de dominio (opcional)
 └── README.md           # Documentación
 ```
 

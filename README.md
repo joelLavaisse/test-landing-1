@@ -24,6 +24,27 @@ Esta landing page está configurada para ser desplegada automáticamente en GitH
 - ✅ Despliegue automático en cada push a `main`
 - ✅ Rama `gh-pages` para el contenido publicado
 
+### ⚠️ Si el deploy falla:
+
+#### Solución 1: Configurar GitHub Pages manualmente
+1. Ve a **Settings** en tu repositorio
+2. Navega a **Pages** en el menú lateral
+3. En **Source**, selecciona **Deploy from a branch**
+4. Selecciona la rama `main` y la carpeta `/ (root)`
+5. Haz clic en **Save**
+
+#### Solución 2: Verificar permisos
+1. Ve a **Settings** → **Actions** → **General**
+2. Asegúrate de que "Actions permissions" esté en "Allow all actions and reusable workflows"
+3. En "Workflow permissions", selecciona "Read and write permissions"
+4. Marca "Allow GitHub Actions to create and approve pull requests"
+
+#### Solución 3: Usar el workflow simple
+Si el workflow principal falla, puedes:
+1. Ir a la pestaña **Actions**
+2. Seleccionar "Simple Deploy to GitHub Pages"
+3. Hacer clic en "Run workflow"
+
 ### Para activar GitHub Pages manualmente:
 1. Ve a **Settings** en tu repositorio
 2. Navega a **Pages** en el menú lateral

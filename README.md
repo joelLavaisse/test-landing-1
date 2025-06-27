@@ -73,10 +73,12 @@ test-landing-1/
 ├── index.html          # Página principal
 ├── styles.css          # Estilos CSS
 ├── script.js           # Funcionalidades JavaScript
-├── .mocks/             # Carpeta con archivos de diseño
-│   └── 601098d3fe7e06017dce793b_shopify-hero.png
+├── images/             # Carpeta de imágenes
+│   └── hero-image.png  # Imagen principal del hero
 ├── .github/workflows/  # Configuración de GitHub Actions
-│   └── deploy.yml      # Workflow de despliegue
+│   ├── deploy.yml      # Workflow de despliegue principal
+│   ├── simple-deploy.yml # Workflow alternativo
+│   └── basic-deploy.yml  # Workflow básico
 ├── .gitignore          # Archivos a ignorar
 ├── CNAME               # Configuración de dominio (opcional)
 └── README.md           # Documentación

@@ -26,24 +26,38 @@ Esta landing page está configurada para ser desplegada automáticamente en GitH
 
 ### ⚠️ Si el deploy falla:
 
-#### Solución 1: Configurar GitHub Pages manualmente
-1. Ve a **Settings** en tu repositorio
-2. Navega a **Pages** en el menú lateral
-3. En **Source**, selecciona **Deploy from a branch**
-4. Selecciona la rama `main` y la carpeta `/ (root)`
-5. Haz clic en **Save**
+#### Error 403 - Permisos Denegados (Más Común)
+Si ves el error: `Permission to joelLavaisse/test-landing-1.git denied to github-actions[bot]`
 
-#### Solución 2: Verificar permisos
+**Solución inmediata:**
+1. Ve a **Settings** → **Actions** → **General**
+2. En **"Actions permissions"**: Selecciona **"Allow all actions and reusable workflows"**
+3. En **"Workflow permissions"**: Selecciona **"Read and write permissions"**
+4. ✅ Marca **"Allow GitHub Actions to create and approve pull requests"**
+5. Haz clic en **"Save"**
+
+**Verificar que el repositorio sea público:**
+1. Ve a **Settings** → **General**
+2. En "Danger Zone", verifica que el repositorio sea **Public**
+3. Si es privado, haz clic en "Change" → "Make public"
+
+#### Solución 1: Configurar GitHub Pages manualmente (Más Fácil)
+1. Ve a **Settings** → **Pages**
+2. En **Source**, selecciona **Deploy from a branch**
+3. Selecciona la rama `main` y la carpeta `/ (root)`
+4. Haz clic en **Save**
+
+#### Solución 2: Usar el workflow básico
+Si los permisos están configurados correctamente:
+1. Ve a la pestaña **Actions**
+2. Selecciona "Basic Deploy to GitHub Pages"
+3. Haz clic en "Run workflow"
+
+#### Solución 3: Verificar permisos
 1. Ve a **Settings** → **Actions** → **General**
 2. Asegúrate de que "Actions permissions" esté en "Allow all actions and reusable workflows"
 3. En "Workflow permissions", selecciona "Read and write permissions"
 4. Marca "Allow GitHub Actions to create and approve pull requests"
-
-#### Solución 3: Usar el workflow simple
-Si el workflow principal falla, puedes:
-1. Ir a la pestaña **Actions**
-2. Seleccionar "Simple Deploy to GitHub Pages"
-3. Hacer clic en "Run workflow"
 
 ### Para activar GitHub Pages manualmente:
 1. Ve a **Settings** en tu repositorio
